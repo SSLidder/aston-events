@@ -53,13 +53,13 @@
         <form method="post" action="bookSport">
             @csrf
             <input type="hidden" name="event_id" value="{{$event->id}}">
-            <button type="submit">Book</button>
+            <button class="black" type="submit">Book</button>
         </form>
         <br>
         <form method="post" action="likeSport">
             @csrf
             <input type="hidden" name="event_id" value="{{$event->id}}">
-            <button type="submit">Like</button>
+            <button class="black" type="submit">Like</button>
         </form>
     </div>
 <br>

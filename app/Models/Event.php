@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use App\Models\Booking;
 
 class Event extends Model
 {
@@ -11,13 +13,11 @@ class Event extends Model
 
     protected $table='events';
 
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User');
+    public function event() {
+        return $this->belongsTo(User::class);
     }
 
-    public function bookings()
-    {
-        return $this->hasMany('App\Models\Booking', 'event_id');
+    public function bookings() {
+        return $this->hasMany(Booking::class);
     }
 }

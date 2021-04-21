@@ -14,13 +14,10 @@ class BookingsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function index() {
-        $user = Auth::user();
-        echo $user->name;
 
-        $bookings = DB::table('bookings')->get();
+        $bookings = Booking::with('user')->get();
 
         // foreach ($bookings as $event) {
         // echo $event->name; //access table2 data
@@ -34,7 +31,7 @@ class BookingsController extends Controller
         //     return view('bookings')->with('bookings', $events);
         // }
 
-        return view('bookings', ['bookings'=>$bookings]);
+        return view('bookings', compact('bookings'));
     }
 
     /**

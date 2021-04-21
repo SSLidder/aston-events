@@ -85,10 +85,6 @@ button {
     transition: all 0.3s ease 0s;
 }
 
-button:hover {
-    background: rgba(0, 136, 169, 1);
-}
-
 input {
     background-color: lightblue;
     font-size: 16px;
@@ -221,9 +217,8 @@ p {
 
 .book_like_buttons {
     display: flex;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    justify-content: center;
+    padding: 10px 0;
+    justify-content: space-around;
 }
 
 .display_events {
@@ -401,6 +396,15 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.bookings-content {
+    padding-top: 150px;
+}
+
+.event-name {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* main {
