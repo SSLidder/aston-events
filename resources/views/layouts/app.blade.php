@@ -28,9 +28,15 @@
     <div id="app">
 
         <header>
-            <a href = "/">
-            <h1 class="logo">Aston Events</h1>
-            </a>
+            @auth
+                <a href = "/home">
+                    <h1 class="logo">Aston Events</h1>
+                </a>
+            @else
+                <a href = "/">
+                    <h1 class="logo">Aston Events</h1>
+                </a>
+            @endauth
         <body >
             <nav>
                 <ul class = "nav_links">
