@@ -8,11 +8,11 @@
 </div>
 
 <div class = "events_buttons">
-    <div class = "events_button"><a class = "btn" href="{{route('sportsEvents')}}">Upcoming Sports</a><li></div>
+    <div class = "events_button"><a class = "btn" href="{{route('sportsEvents')}}">Upcoming Sports</a></div>
 
-    <div class = "events_button"><a class = "btn" href="{{route('cultureEvents')}}">Upcoming Culture Events</a><li></div>
+    <div class = "events_button"><a class = "btn" href="{{route('cultureEvents')}}">Upcoming Culture Events</a></div>
 
-    <div class = "events_button"><a class = "btn" href="{{route('otherEvents')}}">Upcoming Other Events</a><li></div>
+    <div class = "events_button"><a class = "btn" href="{{route('otherEvents')}}">Upcoming Other Events</a></div>
 </div>
 
 

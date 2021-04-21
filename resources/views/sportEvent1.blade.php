@@ -43,11 +43,11 @@
             </div>
         </div>
     </div>
-    
+
 
         {{-- <a href="{{ route('details', ['id' => $event->id])}}" }}>View Details</a> --}}
 
-   
+
     {{-- <form method="post" action="{{ action('App\Http\Controllers\BookingsController@update') }}" > --}}
     <div class = "book_like_buttons">
         <form method="post" action="bookSport">
