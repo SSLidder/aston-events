@@ -119,6 +119,7 @@ input {
 
 .Middle {
     background-color: #0088a9;
+    padding-top: 100px;
 }
 
 .welcome {
@@ -253,17 +254,49 @@ p {
     color: #0088a9;
 }
 
+.events-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.events-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0088a9;
+}
+
 .events_button {
     display: flex;
     padding: 20px;
+    margin: 0 30px 0 30px;
     color: white;
 }
 
 .events_buttons {
-    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0088a9;
+}
+
+.black {
+    background-color: #24252a;
+    margin-left: 0;
+}
+
+.events-msg {
     display: flex;
     justify-content: center;
-    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    background-color: #007c9b;
+    height: 10vh;
+    margin-top: 90px;
 }
 
 .table {
@@ -370,9 +403,9 @@ p {
     flex-direction: column;
 }
 
-main {
+/* main {
     background-color: #24252a;
-}
+} */
 
 footer {
     height: 10vh;
