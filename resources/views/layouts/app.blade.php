@@ -65,7 +65,6 @@
         </header>
         <div class="content">
             <main>
-
                     @yield('content')
             </main>
         </div>

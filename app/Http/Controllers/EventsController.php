@@ -35,10 +35,10 @@ class EventsController extends Controller
                 'user_id' => auth()->id(),
                 'event_id' => request('event_id')
             ]);
-            return redirect('sportsEvents')->with('status', 'Booking Successful!');
+            return redirect('sportsEvents');
         }
         else {
-            return redirect('login')->with('status', 'Please Login to book');
+            return redirect('login')->with('alert', 'Please Login to book');
         }
     }
 
@@ -49,7 +49,7 @@ class EventsController extends Controller
                 'user_id' => auth()->id(),
                 'event_id' => request('event_id')
             ]);
-            return redirect('cultureEvents')->with('status', 'Booking Successful!');
+            return redirect('cultureEvents');
         }
         else {
             return redirect('login')->with('status', 'Please Login to book');
@@ -63,7 +63,7 @@ class EventsController extends Controller
                 'user_id' => auth()->id(),
                 'event_id' => request('event_id')
             ]);
-            return redirect('otherEvents')->with('status', 'Booking Successful!');
+            return redirect('otherEvents');
         }
         else {
             return redirect('login')->with('status', 'Please Login to book');

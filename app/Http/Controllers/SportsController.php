@@ -26,6 +26,7 @@ class SportsController extends Controller
     public function sportEvents() {
         $events = DB::table('events')
         ->where('type', 'Sport')
+        ->take(1)
         ->get();
         return view('sportEvent1', ['events'=>$events]);
     }

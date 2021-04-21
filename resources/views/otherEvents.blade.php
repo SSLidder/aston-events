@@ -108,4 +108,10 @@
     {{-- @endforeach --}}
 </div>
 
+<script type="text/javascript">
+function succesful() {
+    alert("Booking Succesful!");
+}
+</script>
+
 @endsection

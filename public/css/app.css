@@ -249,6 +249,10 @@ p {
     color: #0088a9;
 }
 
+.sports-events-container {
+    padding-top: 120px;
+}
+
 .events-title-container {
     display: flex;
     flex-direction: column;
@@ -405,6 +409,28 @@ p {
 .event-name {
     color: #fff;
     text-decoration: underline;
+}
+
+.sports-img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.card-content {
+    display: flex;
+}
+
+.event-details-text > p {
+    font-size: 1.5rem;
+    padding: 2px 20px;
+}
+
+.card-buttons {
+    display: flex;
+}
+
+.spacing {
+    margin: 0 10px;
 }
 
 /* main {
