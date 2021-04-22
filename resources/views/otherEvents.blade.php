@@ -22,7 +22,7 @@
             </div>
             <p>{{ $event->description }}</p>
             <div class="right">
-                <a href = "{{ route('sportEvent1') }}">View Details</a>
+                <a href = "{{ route('otherEvent1') }}">View Details</a>
             </div>
         </div>
     </div>
