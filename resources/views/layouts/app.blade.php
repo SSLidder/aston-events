@@ -46,7 +46,6 @@
                     <div>
                         @if (Route::has('login'))
                                 @auth
-                                    <a class = "btn" href="{{ url('/home') }}">Home</a>
                                     <a class="btn" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">

@@ -26,6 +26,7 @@ class OthersController extends Controller
     public function otherEvents() {
         $events = DB::table('events')
         ->where('type', 'Other')
+        ->take(1)
         ->get();
         return view('otherEvent1', ['events'=>$events]);
     }

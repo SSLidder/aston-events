@@ -26,6 +26,7 @@ class CulturesController extends Controller
     public function cultureEvents() {
         $events = DB::table('events')
         ->where('type', 'Culture')
+        ->take(1)
         ->get();
         return view('cultureEvent1', ['events'=>$events]);
     }

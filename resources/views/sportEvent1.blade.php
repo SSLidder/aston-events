@@ -38,7 +38,7 @@
                         <form method="post" action="likeSport">
                             @csrf
                             <input type="hidden" name="event_id" value="{{ $event->id }}">
-                            <button class="black spacing" type="submit">Like</button>
+                            <button onClick="likeSuccesful()" class="black spacing" type="submit">Like</button>
                         </form>
                     </div>
                 </div>
@@ -51,9 +51,14 @@
 </div>
 
 <script type="text/javascript">
-function succesful() {
-    alert("Booking Succesful!");
-}
+    function succesful() {
+        alert("Booking Succesful!");
+    }
+
+    function likeSuccesful() {
+        alert("Like Succesful!");
+    }
 </script>
+
 
 @endsection

@@ -25,9 +25,8 @@ Route::get('/events', [App\Http\Controllers\EventsController::class, 'index'])->
 Route::post('/bookSport', [App\Http\Controllers\EventsController::class, 'createSport']);
 Route::post('/likeSport', [App\Http\Controllers\LikesController::class, 'createSport']);
 Route::post('/destroy', [App\Http\Controllers\LikesController::class, 'destroy']);
-Route::get('/details', [App\Http\Controllers\DetailsController::class, 'show'])->name('details');
 Route::get('/bookings', [App\Http\Controllers\BookingsController::class, 'index'])->name('bookings')->middleware('auth');
-Route::get('/sportsEvents', [App\Http\Controllers\SportsController::class, 'index'])->name('sportsEvents');
+Route::get('/sportsEvents', [App\Http\Controllers\SportsController::class, 'render'])->name('sportsEvents');
 Route::get('/cultureEvents', [App\Http\Controllers\CulturesController::class, 'index'])->name('cultureEvents');
 Route::post('/bookCulture', [App\Http\Controllers\EventsController::class, 'createCulture']);
 Route::post('/likeCulture', [App\Http\Controllers\LikesController::class, 'createCulture']);

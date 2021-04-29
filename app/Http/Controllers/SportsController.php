@@ -15,10 +15,13 @@ class SportsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $sorting;
+
     public function index()
     {
         $events = DB::table('events')
                     ->where('type', 'Sport')
+                    ->orderBy('date', 'ASC')
                     ->get();
         return view('sportsEvents', ['events'=>$events]);
     }
@@ -29,6 +32,10 @@ class SportsController extends Controller
         ->take(1)
         ->get();
         return view('sportEvent1', ['events'=>$events]);
+    }
+
+    public function mount() {
+        $this->sorting = 'default';
     }
 
     /**
@@ -105,5 +112,19 @@ class SportsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function render() {
+        if($this->sorting=='date') {
+            $events = DB::table('events')
+            ->where('type', 'Sport')
+            ->orderBy('date', 'ASC')
+            ->get();
+        } else {
+            $events = DB::table('events')
+            ->where('type', 'Sport')
+            ->get();
+        }
+        return view('sportsEvents', ['events'=>$events]);
     }
 }

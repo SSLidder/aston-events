@@ -18,7 +18,6 @@ class EventsController extends Controller
     public function index()
     {
         $events = DB::table('events')
-                    ->where('type', 'Sport')
                     ->get();
         return view('events', ['events'=>$events]);
     }
