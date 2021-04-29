@@ -19,18 +19,6 @@ class BookingsController extends Controller
 
         $bookings = Booking::with('user')->get();
 
-        // foreach ($bookings as $event) {
-        // echo $event->name; //access table2 data
-        // echo $event->bookings->id; //access table1 data
-        // }
-
-        // $event = Booking::first();
-        // if ($user->id == $event->user_id) {
-        //     $events = $event->event_id;
-        //     echo $events;
-        //     return view('bookings')->with('bookings', $events);
-        // }
-
         return view('bookings', compact('bookings'));
     }
 
@@ -63,24 +51,7 @@ class BookingsController extends Controller
      */
     public function show($id)
     {
-        // $user = Auth::user();
-        // $booking = Booking::get();
-        // if ($user->id == $booking->user_id) {
-        //     $userBookings = $booking->event_id;
-        //     return view('bookings')->with('Booking', $userBookings);
-        // }
-
-        // $user_id = Auth::user()->id;
-        // $data['data'] = DB::table('users')
-        //                 ->join('bookings', 'users.id', '=', 'bookings.user_id')
-        //                 ->select('users.id', 'bookings.*')
-        //                 ->where('users.id', $user_id)
-        //                 ->get();
-        // if(count($data)>0) {
-        //     return view('bookings', ['bookings'=>$data]);
-        // } else {
-        //     return view('bookings');
-        // }
+        //
     }
 
     /**
