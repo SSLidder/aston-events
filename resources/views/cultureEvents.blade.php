@@ -4,7 +4,11 @@
 
 <div class = "Middle">
 
-
+    <div class="sort_by" wire:model="sorting">
+        <p>Sort by:</p> 
+        <a value='date'>Date</a> |
+        <a value='default'>Reset</a> 
+    </div>
 
     <h3 class = "eventsHeaders">Upcoming Culture Events!</h3>
 

@@ -2,12 +2,6 @@
 
 @section('content')
 
-@if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-@endif
-
 <div class="sports-events-container">
 
     <h3 class = "eventsHeaders">Upcoming Event!</h3>
@@ -38,7 +32,7 @@
                             <form method="post" action="likeSport">
                                 @csrf
                                 <input type="hidden" name="event_id" value="{{ $event->id }}">
-                                <button class="black spacing" type="submit">Like</button>
+                                <button onClick="likeSuccesful()" class="black spacing" type="submit">Like</button>
                             </form>
                         </div>
                     </div>
@@ -51,9 +45,13 @@
 @endforeach
 
 <script type="text/javascript">
-function succesful() {
-    alert("Booking Succesful!");
-}
+    function succesful() {
+        alert("Booking Succesful!");
+    }
+
+    function likeSuccesful() {
+        alert("Like Succesful!");
+    }
 </script>
 
 @endsection

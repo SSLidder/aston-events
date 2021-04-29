@@ -4,11 +4,11 @@
 
 <div class = "Middle">
 
-    {{-- @if (session('status'))
+    @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}
         </div>
-    @endif --}}
+    @endif
     
     <div class="sort_by" wire:model="sorting">
         <p>Sort by:</p> 
