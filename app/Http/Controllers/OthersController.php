@@ -19,6 +19,7 @@ class OthersController extends Controller
     {
         $events = DB::table('events')
         ->where('type', 'Other')
+        ->orderBy('date', 'ASC')
         ->get();
         return view('otherEvents', ['events'=>$events]);
     }

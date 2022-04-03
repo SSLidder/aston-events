@@ -19,6 +19,7 @@ class CulturesController extends Controller
     {
         $events = DB::table('events')
         ->where('type', 'Culture')
+        ->orderBy('date', 'ASC')
         ->get();
         return view('cultureEvents', ['events'=>$events]);
     }
